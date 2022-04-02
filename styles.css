@@ -1,0 +1,28 @@
+
+html {
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+}
+
+
+.square {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.color {
+  background-color: rgb(143, 45, 45);
+  border: 1px solid black;
+}
+
+.gridContainer {
+  margin-top: 25px;
+  margin-right: 40px;
+  display: inline-grid;
+  grid-template-columns: repeat(16, 2fr);
+  grid-template-rows: repeat(16, 2fr);
+  border: 5px solid black;
+  border-radius: 5px;
+  height: 575px;
+  width: 575px;
+}
