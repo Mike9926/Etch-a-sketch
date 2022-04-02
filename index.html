@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,21 +9,18 @@
     <title>Etch-A-Sketch</title>
   </head>
   <body>
-    <header>
-        <h1>ETCH-A-SKETCH</h1>
-        <p>Sketching has never been more fun!</p>
+   
+      <header><h2>ETCH-A-SKETCH</h2>
+      <p>Sketching has never been more fun!</p>
     </header>
-
-    <div class="content">
-      <div class="glid">
-      <div class="gridContainer"></div>
-    </div> <br>
-    <div class="options">
-      <label for="quantity">Enter Glid Size (5 - 50):</label>
-      <input type="number" id="quantity" name="quantity" />
+    <br>
+      <label for="size"> Enter Grid Size:</label>
+      <input type="number" id="gridSize" placeholder="Value between 10 - 100" />
       <button class="reset">RESET</button>
-    </div>
-   </div>
+  <br>
+
+      <div class="gridBox"></div>
     <script src="app.js"></script>
   </body>
 </html>
+

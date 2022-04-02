@@ -1,6 +1,7 @@
-const grid = document.querySelector(".gridContainer");
-const userInput = document.getElementById("quantity");
-const resetButton = document.querySelector(".reset");
+
+const grid = document.querySelector(".gridBox");
+const userInput = document.getElementById("gridSize");
+const resetBtn = document.querySelector(".reset");
 
 createGrid = () => {
   for (let i = 0; i < 256; i++) {
@@ -21,20 +22,20 @@ updateGrid = () => {
     `repeat(${userInput.value}, 2fr)`
   );
   for (let i = 0; i < userInput.value * userInput.value; i++) {
-  
-    if (userInput.value > 50 || userInput.value < 5 ) // Grid size determination
+   if (userInput.value < 10 || userInput.value > 100)
    {
-     alert("Oops, Choose Grid size between 5 and 50 please.");
+     alert("Oops! Please enter value between 10 and 100");
      return;
+     
    }
    
     const div = document.createElement("div");
     div.classList.add("square");
     grid.appendChild(div);
-
   }
   console.log(userInput.value);
 };
+
 const square = document.querySelector("div");
 square.addEventListener("mouseover", function(event) {
   event.target.classList.replace("square", "color");
@@ -42,11 +43,11 @@ square.addEventListener("mouseover", function(event) {
 
 userInput.addEventListener("change", updateGrid);
 
-resetButton.addEventListener("click", function() {
+resetBtn.addEventListener("click", function() {
   grid.innerHTML = "";
   userInput.value = "";
-  grid.style.setProperty("grid-template-columns", `repeat(16, 2fr)`);
-  grid.style.setProperty("grid-template-rows", `repeat(16, 2fr)`);
+  grid.style.setProperty("grid-template-columns", `repeat(12, 2fr)`);
+  grid.style.setProperty("grid-template-rows", `repeat(12, 2fr)`);
   createGrid();
 });
 
