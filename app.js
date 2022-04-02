@@ -46,8 +46,8 @@ userInput.addEventListener("change", updateGrid);
 resetBtn.addEventListener("click", function() {
   grid.innerHTML = "";
   userInput.value = "";
-  grid.style.setProperty("grid-template-columns", `repeat(12, 2fr)`);
-  grid.style.setProperty("grid-template-rows", `repeat(12, 2fr)`);
+  grid.style.setProperty("grid-template-columns", `repeat(15, 2fr)`);
+  grid.style.setProperty("grid-template-rows", `repeat(15, 2fr)`);
   createGrid();
 });
 
