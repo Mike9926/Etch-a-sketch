@@ -22,9 +22,9 @@ updateGrid = () => {
   );
   for (let i = 0; i < userInput.value * userInput.value; i++) {
   
-    if (userInput.value > 50 ) // Grid size determination
+    if (userInput.value > 50 || userInput.value < 5 ) // Grid size determination
    {
-     alert("Oops, Choose Grid size between 0 and 50 please.");
+     alert("Oops, Choose Grid size between 5 and 50 please.");
      return;
    }
    
@@ -35,7 +35,6 @@ updateGrid = () => {
   }
   console.log(userInput.value);
 };
-
 const square = document.querySelector("div");
 square.addEventListener("mouseover", function(event) {
   event.target.classList.replace("square", "color");
